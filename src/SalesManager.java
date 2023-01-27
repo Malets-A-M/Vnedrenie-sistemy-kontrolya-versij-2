@@ -14,9 +14,9 @@ public class SalesManager {
         }
         return max;
     }
-    public int min(){
-        int min = sales[0];
-        for (int sale : sales){
+    public long min(){
+        long min = sales[0];
+        for (long sale : sales){
             if (sale <= min){
                 min = sale;
             }
@@ -24,10 +24,10 @@ public class SalesManager {
         return min;
     }
 
-    public int average(){
-        int average;
-        int sum = 0;
-        for (int sale : sales) {
+    public long average(){
+        long average;
+        long sum = 0;
+        for (long sale : sales) {
             sum += sale;
         }
         return  average = (sum - max() - min()) / (sales.length - 2);
